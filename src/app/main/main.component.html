@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+          <div class="card mt-5 shadow-lg">
+            <h4 class="card-header bg-primary text-white">CITY NAME: {{city_name}}</h4>
+            <div class="card-footer">
+              
+              <div class="row">
+                <div class="col-md-8">
+                  <input type="text" [(ngModel)]="city_name" class="form-control">
+                </div>
+               <div class="col-md-3">
+                <input type="button"  class=" btn btn bg-white" value="Get details" (click)="displayweatherdata($event)">
+               </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-12">
+      <h5 class="text-center my-4">Weather Details</h5>
+      <span *ngFor="let data of info">
+
+      </span>
+          <div class="col-md-12">
+              <h6>City Name :<span>{{info.name}}</span> </h6>
+              <h6>Temerature :<span>{{[info.main.temp]}} kelvin</span> </h6>
+              <h6>Humidity :<span>{{[info.main.humidity]}}% </span></h6>
+              <h6>pressure :<span>{{[info.main.pressure]}} hpa </span></h6>
+              <h6>Longitide :<span>{{[info.coord.lon]}}°</span></h6>
+              <h6>Latitude :<span>{{[info.coord.lat]}}°</span></h6>
+       
+        </div>
+      
+        
+  
+</div>
+
+
+
+  
+  
+
+  
